@@ -243,24 +243,12 @@ h1 span {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #202223;
-  border: 1px solid #292b2b;
+  background: #eeefeb;
+  border: 1px solid #d9dbd5;
   overflow: hidden;
   transition:
     background 0.25s,
     border-color 0.25s;
-}
-.bottle-stage:after {
-  content: "";
-  position: absolute;
-  bottom: 25px;
-  left: 27%;
-  width: 46%;
-  height: 10px;
-  border-radius: 50%;
-  background: #080909;
-  filter: blur(9px);
-  opacity: 0.55;
 }
 .bottle-stage img {
   width: 70%;
@@ -269,7 +257,7 @@ h1 span {
   position: relative;
   z-index: 1;
   transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.3, 1);
-  filter: drop-shadow(0 12px 11px #0b0c0c66);
+  mix-blend-mode: darken;
 }
 .shelf-number {
   position: absolute;
@@ -340,18 +328,18 @@ h1 span {
   color: #d0d5bc;
 }
 .wishlist .bottle-stage {
-  background: #1c1e1f;
+  background: #e2e4de;
 }
 .wishlist .bottle-stage img,
 .profile-image.wishlist img {
-  filter: saturate(0.55) brightness(0.86) drop-shadow(0 12px 11px #0b0c0c66);
+  filter: saturate(0.55);
 }
 .archived .bottle-stage {
-  background: #1b1d1e;
+  background: #d4d7d1;
 }
 .archived .bottle-stage img,
 .profile-image.archived img {
-  filter: saturate(0.5) brightness(0.77) drop-shadow(0 12px 11px #0b0c0c66);
+  filter: saturate(0.4);
 }
 .archived .card-caption {
   opacity: 0.78;
@@ -457,7 +445,7 @@ footer span:first-child {
   grid-template-columns: 45% 55%;
 }
 .profile-image {
-  background: #272a28;
+  background: #eeefeb;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -469,7 +457,7 @@ footer span:first-child {
   width: 88%;
   height: 390px;
   object-fit: contain;
-  filter: drop-shadow(0 20px 20px #0004);
+  mix-blend-mode: darken;
 }
 .profile-image-caption {
   position: absolute;
@@ -732,13 +720,15 @@ legend {
   align-items: center;
   justify-content: center;
   margin: 25px 0 20px;
-  color: #a4ae96;
+  background: #eeefeb;
+  padding: 24px;
+  color: #626a59;
 }
 .picker-stage img {
   height: 100%;
   max-width: 70%;
   object-fit: contain;
-  filter: drop-shadow(0 17px 20px #0005);
+  mix-blend-mode: darken;
 }
 .picker-stage.revealed {
   animation: reveal 0.5s ease-out;
@@ -798,8 +788,8 @@ legend {
 }
 @media (hover: hover) {
   .fragrance-card:hover .bottle-stage {
-    background: #26292a;
-    border-color: #41463c;
+    background: #eeefeb;
+    border-color: #bdc3b5;
   }
   .fragrance-card:hover img {
     transform: translateY(-7px) rotate(-1deg);
